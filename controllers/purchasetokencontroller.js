@@ -59,7 +59,7 @@ exports.createPurchaseToken = async (req, res) => {
       }
   }
   
-  makeRequest(); 
+  // makeRequest(); 
     // Return success response
     return res.status(201).json({ message: 'Purchase token created successfully!', data: savedToken });
 

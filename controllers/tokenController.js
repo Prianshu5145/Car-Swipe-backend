@@ -68,9 +68,9 @@ exports.submitTokenForm = async (req, res) => {
             const messagingProduct = 'whatsapp'; // Replace with your actual messaging product
             const file = fs.createReadStream(req.file.path); // Replace with the path to your file
     
-        // const CustomerMessage1  =    `*Congratulations from TRUST N RIDE!* 🎉\nWe’re excited to welcome you to the TRUST N RIDE family! Congratulations on tokening your dream car ✨🚘—it’s now yours! *We’re thrilled to be part of your journey, and we’re sure this car will bring you countless memories and adventures.*`
-         // const CustomerMessage2 =  `Here are the details of your car:\n*Car*: ${carTitle}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}+Rto Charges\n*Token Amount*: ${tokenAmount}\n*Fair Market Value*: *${fairMarketValue}*\n*Your token invoice is attached below for your reference.*\nThank you again for choosing TRUST N RIDE. If you need any further assistance, don’t hesitate to reach out!`    
-         //  const ownerMessage = `*Hurray, TEAM TRUST N RIDE! 🎉*\nAnother car successfully *tokenized!* 🚘✨ Let's keep up the pace and accelerate towards even bigger wins!\n*Car*: ${carTitle}\n*REG NO*:${carRegistrationNumber}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}\n*Token Amount*: ${tokenAmount}\n*Pay to*:${paymentTo}\n*Payment Mode*:${paymentMode}\n*Customer Name*:${customerName}\n*Customer Adress*:${customerAddress}\n*Payment of Remaining Amount By*:${loanOrCash}\n*Invoice attached.Let’s continue the momentum!*`
+        // const CustomerMessage1  =    `*Congratulations from CAR SWIPE!* 🎉\nWe’re excited to welcome you to the CAR SWIPE family! Congratulations on tokening your dream car ✨🚘—it’s now yours! *We’re thrilled to be part of your journey, and we’re sure this car will bring you countless memories and adventures.*`
+         // const CustomerMessage2 =  `Here are the details of your car:\n*Car*: ${carTitle}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}+Rto Charges\n*Token Amount*: ${tokenAmount}\n*Fair Market Value*: *${fairMarketValue}*\n*Your token invoice is attached below for your reference.*\nThank you again for choosing CAR SWIPE. If you need any further assistance, don’t hesitate to reach out!`    
+         //  const ownerMessage = `*Hurray, TEAM CAR SWIPE! 🎉*\nAnother car successfully *tokenized!* 🚘✨ Let's keep up the pace and accelerate towards even bigger wins!\n*Car*: ${carTitle}\n*REG NO*:${carRegistrationNumber}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}\n*Token Amount*: ${tokenAmount}\n*Pay to*:${paymentTo}\n*Payment Mode*:${paymentMode}\n*Customer Name*:${customerName}\n*Customer Adress*:${customerAddress}\n*Payment of Remaining Amount By*:${loanOrCash}\n*Invoice attached.Let’s continue the momentum!*`
             const response = await uploadMediaAndSendMessage(phoneNumberId, messagingProduct,file,whatsappMobile,carTitle,
               carModel,
               customerName,
@@ -93,17 +93,17 @@ exports.submitTokenForm = async (req, res) => {
     }
     
    
-      makeRequest(); 
+      // makeRequest(); 
 
     if (customerEmail.includes('@')) {
       const message = `
   <strong>Dear ${customerName},</strong>
-  <p>Thank you for choosing TRUST N RIDE! We are pleased to inform you that we have successfully received your token payment for ${carTitle} (${carRegistrationNumber}). 🚀📑</p>
+  <p>Thank you for choosing CAR SWIPE! We are pleased to inform you that we have successfully received your token payment for ${carTitle} (${carRegistrationNumber}). 🚀📑</p>
   <p>Please find the attached PDF, which includes the payment details, token amount, and terms & conditions.</p>
-  <p>We appreciate your trust in TRUST N RIDE and look forward to completing this deal smoothly. If you have any questions, feel free to reach out to us! 🚘💙</p>
+  <p>We appreciate your trust in CAR SWIPE and look forward to completing this deal smoothly. If you have any questions, feel free to reach out to us! 🚘💙</p>
   <strong>Best Regards,</strong>
   <br>
-  <strong>Team TRUST N RIDE</strong>
+  <strong>Team CAR SWIPE</strong>
 `;
 
   

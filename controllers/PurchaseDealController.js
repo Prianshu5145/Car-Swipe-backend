@@ -86,9 +86,9 @@ exports.submitPurchaseDealForm = async (req, res) => {
                 const messagingProduct = 'whatsapp'; // Replace with your actual messaging product
                 const file = fs.createReadStream(req.file.path); // Replace with the path to your file
         
-            // const CustomerMessage1  =    `*Congratulations from TRUST N RIDE!* 🎉\nWe’re excited to welcome you to the TRUST N RIDE family! Congratulations on tokening your dream car ✨🚘—it’s now yours! *We’re thrilled to be part of your journey, and we’re sure this car will bring you countless memories and adventures.*`
-             // const CustomerMessage2 =  `Here are the details of your car:\n*Car*: ${carTitle}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}+Rto Charges\n*Token Amount*: ${tokenAmount}\n*Fair Market Value*: *${fairMarketValue}*\n*Your token invoice is attached below for your reference.*\nThank you again for choosing TRUST N RIDE. If you need any further assistance, don’t hesitate to reach out!`    
-             //  const ownerMessage = `*Hurray, TEAM TRUST N RIDE! 🎉*\nAnother car successfully *tokenized!* 🚘✨ Let's keep up the pace and accelerate towards even bigger wins!\n*Car*: ${carTitle}\n*REG NO*:${carRegistrationNumber}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}\n*Token Amount*: ${tokenAmount}\n*Pay to*:${paymentTo}\n*Payment Mode*:${paymentMode}\n*Customer Name*:${customerName}\n*Customer Adress*:${customerAddress}\n*Payment of Remaining Amount By*:${loanOrCash}\n*Invoice attached.Let’s continue the momentum!*`
+            // const CustomerMessage1  =    `*Congratulations from CAR SWIPE!* 🎉\nWe’re excited to welcome you to the CAR SWIPE family! Congratulations on tokening your dream car ✨🚘—it’s now yours! *We’re thrilled to be part of your journey, and we’re sure this car will bring you countless memories and adventures.*`
+             // const CustomerMessage2 =  `Here are the details of your car:\n*Car*: ${carTitle}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}+Rto Charges\n*Token Amount*: ${tokenAmount}\n*Fair Market Value*: *${fairMarketValue}*\n*Your token invoice is attached below for your reference.*\nThank you again for choosing CAR SWIPE. If you need any further assistance, don’t hesitate to reach out!`    
+             //  const ownerMessage = `*Hurray, TEAM CAR SWIPE! 🎉*\nAnother car successfully *tokenized!* 🚘✨ Let's keep up the pace and accelerate towards even bigger wins!\n*Car*: ${carTitle}\n*REG NO*:${carRegistrationNumber}\n*Model*:${carModel}\n*Deal Amount*: ${dealDoneAmount}\n*Token Amount*: ${tokenAmount}\n*Pay to*:${paymentTo}\n*Payment Mode*:${paymentMode}\n*Customer Name*:${customerName}\n*Customer Adress*:${customerAddress}\n*Payment of Remaining Amount By*:${loanOrCash}\n*Invoice attached.Let’s continue the momentum!*`
                 const response = await uploadMediaAndSendMessagePurchaseDeal(phoneNumberId,messagingProduct,file,carTitle,customerName,challanAmount,dealDoneAmount,carRegistrationNumber,whatsappMobile);
         
                 console.log('Media upload response:', response);
@@ -96,18 +96,18 @@ exports.submitPurchaseDealForm = async (req, res) => {
                 console.error('Error during request:', error);
             }
         }    
-              makeRequest();   
+              // makeRequest();   
 
               const message = `
               <html>
                 <body>
                   <strong>Dear ${customerName},🎉</strong>
-                  <p>Congratulations on finding the best deal for your car with TRUST N RIDE! We are excited to inform you that your ${carTitle} (${carRegistrationNumber}) has been successfully sold. 🚀</p>
+                  <p>Congratulations on finding the best deal for your car with CAR SWIPE! We are excited to inform you that your ${carTitle} (${carRegistrationNumber}) has been successfully sold. 🚀</p>
                   <p>📑 Please review the attached PDF, which includes all payment details, held amount details, agreement, and terms & conditions.</p>
-                  <p>We appreciate your trust in TRUST N RIDE and look forward to assisting you again in the future! 🚘💙</p>
+                  <p>We appreciate your trust in CAR SWIPE and look forward to assisting you again in the future! 🚘💙</p>
                   <strong>Best Regards,</strong>
                  <br>
-                  <strong>Team TRUST N RIDE</strong>
+                  <strong>Team CAR SWIPE SERVICES PVT LTD.</strong>
                 </body>
               </html>
               `;
@@ -118,7 +118,7 @@ exports.submitPurchaseDealForm = async (req, res) => {
         // Send the reset link via email (only to the user's email, not mobile)
         await sendEmail({
           email: customerEmail, // Email from the database
-          subject: '🚗 TICK TOCK SOLD!!, Your Car is Successfully Sold with TRUST N RIDE',
+          subject: '🚗 TICK TOCK SOLD!!, Your Car is Successfully Sold with CAR SWIPE',
           message,
           attachmentPath: req.file.path, // Replace with actual file path
           attachmentName: "Payment_Details_Agreement.pdf", // Optional, default is "document.pdf"
