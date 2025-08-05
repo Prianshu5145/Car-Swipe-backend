@@ -97,7 +97,7 @@ exports.forgotPassword = async (req, res) => {
     await user.save();
 
     // Create the reset link
-    const resetLink = `https://www.trustnride.in/reset-Password/${resetToken}`;
+    const resetLink = `https://carswipe.in/reset-Password/${resetToken}`;
 
     // Email message with the reset link
     const message = `You requested a password reset. Click the link below to reset your password: ${resetLink}`;
