@@ -107,7 +107,7 @@ exports.submitPurchaseDealForm = async (req, res) => {
                   <p>We appreciate your trust in CAR SWIPE and look forward to assisting you again in the future! 🚘💙</p>
                   <strong>Best Regards,</strong>
                  <br>
-                  <strong>Team CAR SWIPE SERVICES PVT LTD.</strong>
+                  <strong>Team CAR SWIPE</strong>
                 </body>
               </html>
               `;
