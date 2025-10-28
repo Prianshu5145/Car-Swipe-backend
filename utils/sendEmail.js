@@ -32,6 +32,7 @@ const sendEmail = async (options) => {
         <p style="font-size: 1em; color: #0078D7;">TICK TOCK SOLD!!</p>
         <p><strong>📞</strong> 9792983625</p>
         <p>📍 Car Swipe Services Pvt Ltd, Taukalpur Nagra, Surapur, Kadipur, Sultanpur, Uttar Pradesh, 228161</p>
+         <p><strong>🌐</strong> <a href="https://carswipe.in/" target="_blank">www.carswipe.in</a></p>
         <br>
         <p><em>This email and its contents are confidential.</em></p>
       `,
